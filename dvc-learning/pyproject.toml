@@ -1,0 +1,32 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "dvc_learning"
+version = "0.0.1"
+description = "this is a project for learning how to use dvc, thats all"
+authors = [
+  { name = "Kislay" },
+]
+
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    
+]
+requires-python = "~=3.10.0"
+
+
+[tool.ruff]
+line-length = 99
+src = ["dvc_learning"]
+include = ["pyproject.toml", "dvc_learning/**/*.py"]
+
+[tool.ruff.lint]
+extend-select = ["I"]  # Add import sorting
+
+[tool.ruff.lint.isort]
+known-first-party = ["dvc_learning"]
+force-sort-within-sections = true
+
